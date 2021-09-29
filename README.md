@@ -52,6 +52,7 @@ implementation 'com.github.niloc78:crosie-utils:$version'
 | `makeItemTouchCallback`          | A function that replaces ItemTouchCallback.SimpleCallback with added features and default functionality | dragDirs, swipeDirs, longPressedEnabled, onMove, getMovementFlags, doNotAllowSwipeIf, doNotAllowDragIf, onSwiped, onClearView    |
 | `TextView.setSimpleValueAnimator`                   | An extension function for TextView that allows you to animate value changes specifically for Int and Float                                                      | valueType, toValue, animationDuration, onAnimating             |
 | `View.makeSimpleConstraintAnimation`             | An extension function that sets up TransitionManager and ConstraintSet for animations within a ConstraintLayout                                                    | transitionSet, invokeAfterApply, setUpConstraintSet              |
+| `DrawerLayout.makeListener` | An extension function for DrawerLayout that replaces addDrawerListener() with default functionalities  | onSlide, onOpened, onClosed, onStateChanged |
 
 ### Location Utils
 

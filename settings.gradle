@@ -1,0 +1,3 @@
+include ':ui-utils'
+include ':app'
+rootProject.name = "crosie-utils"

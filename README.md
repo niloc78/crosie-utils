@@ -1,5 +1,35 @@
 ##### crosie-utils is a collection of Kotlin functions and extension functions for common Android UI listeners to make implementation easier by removing boilerplate code. 
 
+## Why? 
+
+We all know how annoying it is to add original Java UI listeners by overriding and implementing all required methods even if we don't need them. The resulting code takes up space and is an eyesore to look at. Take this code for example: 
+
+```kotlin
+set.addListener(object : Transition.TransitionListener {
+            override fun onTransitionStart(transition: Transition) {
+            }
+
+            override fun onTransitionEnd(transition: Transition) {
+                doStuff()
+            }
+
+            override fun onTransitionCancel(transition: Transition) {
+            }
+
+            override fun onTransitionPause(transition: Transition) {
+            }
+
+            override fun onTransitionResume(transition: Transition) {
+            }
+
+        })
+```
+In cases where we don't need to use all the overridden functions, it would be much easier to not include them in the first place. By making shortcut functions and extension functions we end up with code that looks much cleaner: 
+
+```kotlin
+set.makeListener(onEnd = { doStuff() })
+```
+
 # Try it out:
 
 In your project level gradle file, add this into your repositories:
